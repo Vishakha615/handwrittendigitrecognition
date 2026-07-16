@@ -1,6 +1,6 @@
-streamlit==1.59.2
-numpy==2.2.6
-tensorflow==2.21.0
-opencv-python==5.0.0
-pandas==3.0.1
-streamlit_drawable_canvas==0.9.3
+streamlit
+tensorflow
+numpy
+opencv-python-headless
+streamlit_drawable_canvas
+pandas
