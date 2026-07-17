@@ -9,12 +9,12 @@ import cv2
 
 st.markdown(""" <style>
         .stApp{
-        background: linear-gradient(to top, #FFFFFF, #D7E8F7);
+        background: linear-gradient(to top, #CEDFF5, #FFFFFF);
             }
             
             
   div.stButton > button {
-    background-color: #3B6A94;
+    background-color: #2F5270;
     color: white;
     font-size: 20px;
     font-weight: bold;
@@ -32,7 +32,7 @@ st.markdown(""" <style>
 st.markdown("""
 <style>
 [data-testid="stSidebar"] {
-    background-color: #89B3D9;
+    background-color: #2F5270;
     color:white;
             
 }       
@@ -56,25 +56,25 @@ st.markdown("""
             <h5 style="margin-top:20px; color:#062136; "> Draw a digit (0–9) and click Predict </h5>""",unsafe_allow_html=True)
 
 st.sidebar.markdown(""" 
-            <h1  style="color:#062136; " > <u>About </u></h1>""",unsafe_allow_html=True)
+            <h1  style="color:#062136;" > <u>About </u></h1>""",unsafe_allow_html=True)
+
 st.sidebar.divider()
 
-st.sidebar.markdown(""" <h4 style="color:#3B6A94; padding:0px;"><b>Model : ANN</b></h4>""",unsafe_allow_html=True)
-st.sidebar.divider()
+st.sidebar.markdown(""" <h5 style="color:#FFFFFF; margin-bottom:10px; padding:0px;">Model : ANN</h5>""",unsafe_allow_html=True)
 
-st.sidebar.markdown(""" <h4 style="color:#3B6A94; padding:0px;">Dataset : MNIST</h4>""",unsafe_allow_html=True)
-st.sidebar.divider()
+st.sidebar.markdown(""" <h5 style="color:#FFFFFF; margin-bottom:10px; padding:0px;">Dataset : MNIST</h5>""",unsafe_allow_html=True)
 
-st.sidebar.markdown(""" <h4 style="color:#3B6A94; padding:0px;">Image Size : 28 x 28</h4>""",unsafe_allow_html=True)
-st.sidebar.divider()
 
-st.sidebar.markdown(""" <h4 style="color:#3B6A94; padding:0px;">Framework : TensorFlow</h4>""",unsafe_allow_html=True)
-st.sidebar.divider()
+st.sidebar.markdown(""" <h5 style="color:#FFFFFF; margin-bottom:10px; padding:0px;">Image Size : 28 x 28</h5>""",unsafe_allow_html=True)
 
-st.sidebar.markdown(""" <h4 style="color:#3B6A94; padding:0px;">Accuracy : 97%</h4>""",unsafe_allow_html=True)
+
+st.sidebar.markdown(""" <h5 style="color:#FFFFFF; margin-bottom:10px; padding:0px;">Framework : TensorFlow</h5>""",unsafe_allow_html=True)
+
+
+st.sidebar.markdown(""" <h5 style="color:#FFFFFF;   padding:0px;">Accuracy : 97%</h5>""",unsafe_allow_html=True)
 st.sidebar.divider()
-st.sidebar.markdown(""" <h4 style="color:#062136; margin-bottom:5px;">Developed by :</h4>""",unsafe_allow_html=True)
-st.sidebar.markdown(""" <h5 style="color:#3B6A94; padding:0px;">&nbsp;&nbsp;&nbsp;Vishakha Nikam </h5>""",unsafe_allow_html=True)
+st.sidebar.markdown(""" <h3 style="color:#062136; margin-bottom:5px;">Developed by :</h3>""",unsafe_allow_html=True)
+st.sidebar.markdown(""" <h5 style="color:#FFFFFF; padding:0px;">&nbsp;&nbsp;&nbsp;Vishakha Nikam </h5>""",unsafe_allow_html=True)
 
 
 
@@ -147,7 +147,7 @@ if st.button("Predict"):
 st.divider()
 st.markdown(
     """
-    <div style="text-align:center; color:#BBBDBF;">
+    <div style="text-align:center; color:#A7A7A8;">
         Developed using TensorFlow, Keras and Streamlit
     </div>
     """,
