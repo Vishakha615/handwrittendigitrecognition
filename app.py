@@ -6,24 +6,95 @@ from tensorflow.keras.models import load_model
 import cv2
 
 
+
+st.markdown(""" <style>
+        .stApp{
+        background: linear-gradient(to top, #FFFFFF, #D7E8F7);
+            }
+            
+            
+  div.stButton > button {
+    background-color: #3B6A94;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    width: 145px;
+    height: 45px;
+    border-radius: 10px;
+    border: 2px double white;
+    margin-top : 10px;
+    margin-bottom : 10px;
+}
+            </style>
+""",unsafe_allow_html=True)
+
+
+st.markdown("""
+<style>
+[data-testid="stSidebar"] {
+    background-color: #89B3D9;
+    color:white;
+            
+}       
+
+
+</style>
+""", unsafe_allow_html=True)
+
+
 # Load the pre-trained model
+
 model = load_model('digit_recognition_model.keras')
 
-st.title("Handwritten Digit Recognition")
+
+
+st.markdown(""" 
+            <h1 style="color: #062136 "> ✍️ Handwritten Digit Recognition </h1>""",unsafe_allow_html=True)
+
+st.divider()
+st.markdown(""" 
+            <h5 style="margin-top:20px; color:#062136; "> Draw a digit (0–9) and click Predict </h5>""",unsafe_allow_html=True)
+
+st.sidebar.markdown(""" 
+            <h1  style="color:#062136; " > <u>About </u></h1>""",unsafe_allow_html=True)
+st.sidebar.divider()
+
+st.sidebar.markdown(""" <h4 style="color:#3B6A94; padding:0px;"><b>Model : ANN</b></h4>""",unsafe_allow_html=True)
+st.sidebar.divider()
+
+st.sidebar.markdown(""" <h4 style="color:#3B6A94; padding:0px;">Dataset : MNIST</h4>""",unsafe_allow_html=True)
+st.sidebar.divider()
+
+st.sidebar.markdown(""" <h4 style="color:#3B6A94; padding:0px;">Image Size : 28 x 28</h4>""",unsafe_allow_html=True)
+st.sidebar.divider()
+
+st.sidebar.markdown(""" <h4 style="color:#3B6A94; padding:0px;">Framework : TensorFlow</h4>""",unsafe_allow_html=True)
+st.sidebar.divider()
+
+st.sidebar.markdown(""" <h4 style="color:#3B6A94; padding:0px;">Accuracy : 97%</h4>""",unsafe_allow_html=True)
+st.sidebar.divider()
+st.sidebar.markdown(""" <h4 style="color:#062136; margin-bottom:5px;">Developed by :</h4>""",unsafe_allow_html=True)
+st.sidebar.markdown(""" <h5 style="color:#3B6A94; padding:0px;">&nbsp;&nbsp;&nbsp;Vishakha Nikam </h5>""",unsafe_allow_html=True)
+
+
+
+
+
 
 canvas_result = st_canvas(
+
+
     fill_color = "#00000000",  # Canvas background color -> black
     stroke_width = 10,
     stroke_color ="#FFFFFF",  # Stroke color -> white
     background_color ="#000000",
-    width = 280,
-    height = 280,
+    width = 320,
+    height = 320,
     drawing_mode = "freedraw",
     key = "canvas",
 )
 
 if st.button("Predict"):
-    st.write("Predicting...")
 
     # Convert the canvas image to a numpy array
     img = canvas_result.image_data.astype(np.uint8)
@@ -44,5 +115,41 @@ if st.button("Predict"):
 
     index = np.argmax(result)   # Get the index of the highest probability digit
 
+    st.divider()
     
-    st.write(f"The predicted digit is: {index}")
+    st.markdown(""" 
+            <h3 style="color: #062136 "><b>🎯 Predicted Digit:</b> </h3>""",unsafe_allow_html=True)
+    
+    st.markdown(
+    f"<h2 style='  color:#062136;'> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    {index}</h2>",
+    unsafe_allow_html=True
+    )
+
+    st.divider()
+    
+    confidence = np.max(result) * 100
+
+    
+    
+    st.markdown(
+    f"""
+        <h3><b>✅ Confidence</b></h3>
+        <h3 style="color:#1E88E5; ">
+            {confidence:.2f}%
+        </h3>
+   
+    """,
+    unsafe_allow_html=True
+    )
+    
+    st.progress(int(confidence))
+    
+st.divider()
+st.markdown(
+    """
+    <div style="text-align:center; color:#BBBDBF;">
+        Developed using TensorFlow, Keras and Streamlit
+    </div>
+    """,
+    unsafe_allow_html=True
+)
