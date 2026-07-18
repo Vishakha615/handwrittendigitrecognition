@@ -60,18 +60,18 @@ st.sidebar.markdown("""
 
 st.sidebar.divider()
 
-st.sidebar.markdown(""" <h5 style="color:#FFFFFF; margin-bottom:10px; padding:0px;">Model : ANN</h5>""",unsafe_allow_html=True)
+st.sidebar.markdown(""" <h5 style="color:#FFFFFF; margin-bottom:10px; padding:0px;">🧠 Model : ANN</h5>""",unsafe_allow_html=True)
 
-st.sidebar.markdown(""" <h5 style="color:#FFFFFF; margin-bottom:10px; padding:0px;">Dataset : MNIST</h5>""",unsafe_allow_html=True)
-
-
-st.sidebar.markdown(""" <h5 style="color:#FFFFFF; margin-bottom:10px; padding:0px;">Image Size : 28 x 28</h5>""",unsafe_allow_html=True)
+st.sidebar.markdown(""" <h5 style="color:#FFFFFF; margin-bottom:10px; padding:0px;">📂 Dataset : MNIST</h5>""",unsafe_allow_html=True)
 
 
-st.sidebar.markdown(""" <h5 style="color:#FFFFFF; margin-bottom:10px; padding:0px;">Framework : TensorFlow</h5>""",unsafe_allow_html=True)
+st.sidebar.markdown(""" <h5 style="color:#FFFFFF; margin-bottom:10px; padding:0px;">🖼️ Image Size : 28 x 28</h5>""",unsafe_allow_html=True)
 
 
-st.sidebar.markdown(""" <h5 style="color:#FFFFFF;   padding:0px;">Accuracy : 97%</h5>""",unsafe_allow_html=True)
+st.sidebar.markdown(""" <h5 style="color:#FFFFFF; margin-bottom:10px; padding:0px;">⚙️ Framework : TensorFlow</h5>""",unsafe_allow_html=True)
+
+
+st.sidebar.markdown(""" <h5 style="color:#FFFFFF;   padding:0px;">🎯 Accuracy : 97%</h5>""",unsafe_allow_html=True)
 st.sidebar.divider()
 st.sidebar.markdown(""" <h3 style="color:#062136; margin-bottom:5px;">Developed by :</h3>""",unsafe_allow_html=True)
 st.sidebar.markdown(""" <h5 style="color:#FFFFFF; padding:0px;">&nbsp;&nbsp;&nbsp;Vishakha Nikam </h5>""",unsafe_allow_html=True)
